@@ -7,6 +7,8 @@ let body = selectElement('body');
 menuToggler.addEventListener('click',function(){
 	body.classList.toggle('open');
 });
+
+
 const menuBtn = document.querySelector('.menu-btn');
 let menuOpen = false;
 menuBtn.addEventListener('click', () => {

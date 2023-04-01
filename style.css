@@ -57,9 +57,10 @@ header
 }
 .nav{
 	height: 7.2rem;
-	display: flex;
-	align-items: center;
-	justify-content: right;
+	display: block;
+  right: 0;
+  top: 0;
+  position: fixed;
 }
 .menu-toggle{
 	color: #fff;
