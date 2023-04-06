@@ -244,12 +244,12 @@ display: none;
 	color: #fff;
 	background-color: var(--secondary-font-color);
 }
-/*discover our story*/
+/*gravid section*/
 .global-headline{
 	text-align: center;
 	margin-top: 3.9rem;
 }
-.discover-our-story .global-headline{
+.gravid-section .global-headline{
 	margin-top: 6.9rem;
 }
 .global-headline .asterisk{
@@ -265,13 +265,13 @@ display: none;
 	letter-spacing: -1px;
 	line-height: .42;
 }
-.restaurant-info{
+.gravid-info{
 	text-align: center;
 }
-.restaurant-description{
+.gravid-description{
 	margin-bottom: 3rem;
 }
-.restaurant-description p{
+.gravid-description p{
 	line-height: 1.6;
 	margin-bottom: 2.4rem;
 }
@@ -351,7 +351,7 @@ display: none;
 	background-color: var(--main-font-color-dark);
 }
 
-/*Tasteful recipes*/
+/*Get in Touch section*/
 .get_out_touch {
 	background: url("img/thirdFiller.jpg") center no-repeat;
 	background-size: cover;
@@ -451,16 +451,52 @@ display: none;
 	grid-gap: 1.5rem;
 }
 
-.discover-our-menu .restaurant-description{
+.gravid-section .gravid-description{
 	padding-top: 3rem;
 	margin-bottom: 0;
 }
 
 
-/*The perfect blend*/
+/*Between section*/
 
-.perfect-blend{
+.gravid_b {
 	background:url(img/firstFiller.jpg) center no-repeat;
+	background-size: cover;
+}
+.baby_b {
+  background:url(img/firstFiller.jpg) center no-repeat;
+	background-size: cover;
+}
+.barn_b {
+  background:url(img/firstFiller.jpg) center no-repeat;
+	background-size: cover;
+}
+.familj_b {
+  background:url(img/firstFiller.jpg) center no-repeat;
+	background-size: cover;
+}
+.porträtt_b {
+  background:url(img/firstFiller.jpg) center no-repeat;
+	background-size: cover;
+}
+.student_b {
+  background:url(img/firstFiller.jpg) center no-repeat;
+	background-size: cover;
+}
+.körkort_b {
+  background:url(img/firstFiller.jpg) center no-repeat;
+	background-size: cover;
+}
+.begravning_b {
+  background:url(img/firstFiller.jpg) center no-repeat;
+	background-size: cover;
+}
+.associations_b {
+  background:url(img/firstFiller.jpg) center no-repeat;
+	background-size: cover;
+}
+.company_b {
+  background:url(img/firstFiller.jpg) center no-repeat;
 	background-size: cover;
 }
 
@@ -592,12 +628,12 @@ footer{
 		max-width: 11.4rem;
 
 	}
-	.restaurant-info{
+	.gravid-info{
 		display: flex;
 		align-items: center;
 
 	}
-	.restaurant-info >div{
+	.gravid-info >div{
 		flex: 1;
 
 	}
