@@ -1,23 +1,21 @@
-//Select element function
-const selectElement = function(element){
-	return document.querySelector(element);
-};
-let menuToggler = selectElement('.menu-btn');
-let body = selectElement('body');
-menuToggler.addEventListener('click',function(){
-	body.classList.toggle('open');
+const menuBtn = document.querySelector('.menu-btn');
+const navMenu = document.querySelector('.nav');
+const body = document.body;
+
+// Toggle menu
+menuBtn.addEventListener('click', (e) => {
+  e.stopPropagation(); // Prevent body click
+  body.classList.toggle('open');
 });
 
-
-const menuBtn = document.querySelector('.menu-btn');
-let menuOpen = false;
-menuBtn.addEventListener('click', () => {
-  if(!menuOpen) {
-    menuBtn.classList.add('open');
-    menuOpen = true;
-  } else {
-    menuBtn.classList.remove('open');
-    menuOpen = false;
+// Close menu on outside click
+document.addEventListener('click', (e) => {
+  if (
+    !menuBtn.contains(e.target) &&
+    !navMenu.contains(e.target) &&
+    body.classList.contains('open')
+  ) {
+    body.classList.remove('open');
   }
 });
 

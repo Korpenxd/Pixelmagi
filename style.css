@@ -8,6 +8,19 @@
     box-sizing: border-box;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 :root{
     --main-font: 'Source Sans Pro', sans-serif;
     --secondary-font: 'Herr Von Muellerhoff', cursive;
@@ -57,10 +70,14 @@ header
 }
 .nav{
 	height: 7.2rem;
-	display: block;
+  display: none;
+	/*display: block;*/
   right: 0;
   top: 0;
   position: fixed;
+}
+body.open .nav{
+  display: block;
 }
 .menu-toggle{
 	color: #fff;
@@ -408,8 +425,17 @@ display: none;
   font-weight: 400;
 }
 
-.contact-form .input-text:focus + .label, .contact-form .input-text.not-empty + .label {
-  transform: translateY(-24px);
+.contact-form .input-text:focus + .label,
+.contact-form .input-text:valid + .label{
+  transform: translate(-17px, -30px);
+  font-size: 20px;
+  transition: .3s;
+}
+
+textarea {
+  resize: none;
+  overflow-y: auto;
+
 }
 
 .contact-form .input-text:focus {
@@ -460,27 +486,27 @@ display: none;
 /*Between section*/
 
 .gravid_b {
-	background:url(img/baby-padding.jpg) center no-repeat;
+	background:url(img/preg_between.jpg) center no-repeat;
 	background-size: cover;
 }
 .baby_b {
-  background:url(img/firstFiller.jpg) center no-repeat;
+  background:url(img/baby_between.jpg) center no-repeat;
 	background-size: cover;
 }
 .barn_b {
-  background:url(img/family-padding.jpg) center no-repeat;
+  background:url(img/barn_between.jpg) center no-repeat;
 	background-size: cover;
 }
 .familj_b {
-  background:url(img/firstFiller.jpg) center no-repeat;
+  background:url(img/family-padding.jpg) center no-repeat;
 	background-size: cover;
 }
 .porträtt_b {
-  background:url(img/student.jpg) center no-repeat;
+  background:url(img/portrait_between.jpg) center no-repeat;
 	background-size: cover;
 }
 .student_b {
-  background:url(img/firstFiller.jpg) center no-repeat;
+  background:url(img/student_between.jpg) center no-repeat;
 	background-size: cover;
 }
 .körkort_b {
@@ -488,15 +514,15 @@ display: none;
 	background-size: cover;
 }
 .begravning_b {
-  background:url(img/firstFiller.jpg) center no-repeat;
+  background:url(img/funeral-b.jpg) center no-repeat;
 	background-size: cover;
 }
 .associations_b {
-  background:url(img/firstFiller.jpg) center no-repeat;
+  background:url(img/org_between.jpg) center no-repeat;
 	background-size: cover;
 }
 .company_b {
-  background:url(img/firstFiller.jpg) center no-repeat;
+  background:url(img/company-b.jpg) center no-repeat;
 	background-size: cover;
 }
 

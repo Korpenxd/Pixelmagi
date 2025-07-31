@@ -14,45 +14,41 @@
 <body>
 	<header>
 			<nav class="nav">
-				<div class="menu-btn">
+          <div class="menu-btn">
           <div class="menu-btn__burger"></div>
-          <!--
-					<i class="fas fa-bars"></i>
-					<i class="fas fa-times"></i>
-        -->
-
 				</div>
-				<!-- <a href="index.html" class="logo"><img src="logo-rosa.png" alt="img"></a> -->
 				<ul class="nav-list">
           <li class="nav-item"></li>
-            <a href="index.html" class="nav-link">Bröllop</a>
+            <a href="#wedding" class="nav-link">Bröllop</a>
           <li class="nav-item"></li>
-            <a href="index.html" class="nav-link">Gravid</a>
+            <a href="#contact" class="nav-link">Kontakt</a>
           <li class="nav-item"></li>
-            <a href="index.html" class="nav-link">Baby</a>
+            <a href="#preg" class="nav-link">Gravid</a>
           <li class="nav-item"></li>
-            <a href="index.html" class="nav-link">Barn</a>
+            <a href="#baby" class="nav-link">Baby</a>
           <li class="nav-item"></li>
-            <a href="index.html" class="nav-link">Familj</a>
+            <a href="#child" class="nav-link">Barn</a>
           <li class="nav-item"></li>
-            <a href="index.html" class="nav-link">Porträtt</a>
+            <a href="#family" class="nav-link">Familj</a>
           <li class="nav-item"></li>
-            <a href="index.html" class="nav-link">Student</a>
+            <a href="#portrait" class="nav-link">Porträtt</a>
           <li class="nav-item"></li>
-            <a href="index.html" class="nav-link">Körkortsfoto</a>
+            <a href="#student" class="nav-link">Student</a>
           <li class="nav-item"></li>
-            <a href="index.html" class="nav-link">Begravning</a>
+            <a href="#licence" class="nav-link">Körkortsfoto</a>
           <li class="nav-item"></li>
-            <a href="index.html" class="nav-link">Föreningar</a>
+            <a href="#funeral" class="nav-link">Begravning</a>
           <li class="nav-item"></li>
-            <a href="index.html" class="nav-link">Företag</a>
+            <a href="#org" class="nav-link">Föreningar</a>
           <li class="nav-item"></li>
-            <a href="index.html" class="nav-link">Produkter</a>
+            <a href="#company" class="nav-link">Företag</a>
           <li class="nav-item"></li>
-            <a href="index.html" class="nav-link">Om Oss</a>
+            <a href="#product" class="nav-link">Produkter</a>
           <li class="nav-item"></li>
-            <a href="index.html" class="nav-link">Kontakt</a>
+            <a href="#about" class="nav-link">Om Oss</a>
+
 				</ul>
+
 			</nav>
 	</header>
 	<!-- Header ends -->
@@ -76,7 +72,7 @@
 		</div>
 	</section>
 	<!-- hero ends -->
-	<section class="gravid-section">
+	<section class="gravid-section" id="wedding">
 		<div class="container">
 			<div class="gravid-info">
 				<div class="gravid-description padding-right animate-left">
@@ -123,28 +119,28 @@
 	<!-- discover story ends -->
   <section class="get_out_touch between">
 
-	<section class="get_yeet_touch between">
+	<section class="get_yeet_touch between" id="contact">
   <h1 class="title">Kontakta Mig</h1>
   <div class="container">
     <div class="contact-form row">
       <div class="form-field col-lg-6">
-        <input id="name" class="input-text" type="text" name="">
+        <input id="name" required class="input-text" type="text" name="">
         <label for="name" class="label">namn</label>
       </div>
       <div class="form-field col-lg-6">
-        <input id="email" class="input-text" type="email" name="">
+        <input id="email" required class="input-text" type="email" name="">
         <label for="email" class="label">email</label>
       </div>
       <div class="form-field col-lg-6">
-        <input id="phone" class="input-text" type="" name="">
+        <input id="phone" required class="input-text" type="tel" name="">
         <label for="phone" class="label">telefon nummer</label>
       </div>
       <div class="form-field col-lg-12">
-        <input id="message" class="input-text" type="text" name="">
+        <textarea id="message" required class="input-text" type="text" name="" wrap"soft"></textarea>
         <label for="message" class="label">meddelande</label>
       </div>
       <div class="form-field col-lg-12">
-        <input class="submit-btn" type="submit" value="submit" name="">
+        <input class="submit-btn" type="submit" value="Skicka" name="">
     </div>
   </div>
 
@@ -152,7 +148,7 @@
 </section>
 	<!-- Contact Form Ends -->
 
-	<section class="gravid-section">
+	<section class="gravid-section" id="gravid">
 		<div class="container">
 			<div class="gravid-info">
 				<div class="image-group padding-right animate-left">
@@ -199,7 +195,7 @@
 -->
 </section>
 <!-- perfect blend ends -->
-<section class="culinary-delight">
+<section class="culinary-delight" id="baby">
 	<div class="container">
 			<div class="gravid-info">
 				<div class="gravid-description padding-right animate-left">
@@ -244,7 +240,7 @@
 -->
 </section>
 
-<section class="barn-section">
+<section class="barn-section" id="child">
   <div class="container">
     <div class="gravid-info">
       <div class="barn-description padding-right animate-left">
@@ -286,7 +282,7 @@
 -->
 </section>
 
-<section class="gravid-section">
+<section class="gravid-section" id="family">
   <div class="container">
     <div class="gravid-info">
       <div class="gravid-description padding-right animate-left">
@@ -326,7 +322,7 @@
 -->
 </section>
 
-<section class="gravid-section">
+<section class="gravid-section" id="portrait">
   <div class="container">
     <div class="gravid-info">
       <div class="gravid-description padding-right animate-left">
@@ -369,7 +365,7 @@
 -->
 </section>
 
-<section class="gravid-section">
+<section class="gravid-section" id="student">
   <div class="container">
     <div class="gravid-info">
       <div class="gravid-description padding-right animate-left">
@@ -407,7 +403,7 @@
 -->
 </section>
 
-<section class="gravid-section">
+<section class="gravid-section" id="licence">
   <div class="container">
     <div class="gravid-info">
       <div class="gravid-description padding-right animate-left">
@@ -423,7 +419,7 @@
         <a href="#" class="btn body-btn">Boka</a>
       </div>
       <div class="gravid-info-img animate-right">
-        <img src="img/licence-p.jpg">
+        <img src="img/drivers-licence.jpg">
       </div>
     </div>
   </div>
@@ -445,7 +441,7 @@
 -->
 </section>
 
-<section class="gravid-section">
+<section class="gravid-section" id="funeral">
   <div class="container">
     <div class="gravid-info">
       <div class="gravid-description padding-right animate-left">
@@ -465,7 +461,7 @@
         <a href="#" class="btn body-btn">Boka</a>
       </div>
       <div class="gravid-info-img animate-right">
-        <img src="img/wedding.jpg">
+        <img src="img/funeral.jpg">
       </div>
     </div>
   </div>
@@ -487,7 +483,7 @@
 -->
 </section>
 
-<section class="gravid-section">
+<section class="gravid-section" id="org">
   <div class="container">
     <div class="gravid-info">
       <div class="gravid-description padding-right animate-left">
@@ -505,7 +501,7 @@
         <a href="#" class="btn body-btn">Boka</a>
       </div>
       <div class="gravid-info-img animate-right">
-        <img src="img/wedding.jpg">
+        <img src="img/org_p.jpg">
       </div>
     </div>
   </div>
@@ -527,7 +523,7 @@
 -->
 </section>
 
-<section class="gravid-section">
+<section class="gravid-section" id="company">
   <div class="container">
     <div class="gravid-info">
       <div class="gravid-description padding-right animate-left">
@@ -547,7 +543,7 @@
         <a href="#" class="btn body-btn">Boka</a>
       </div>
       <div class="gravid-info-img animate-right">
-        <img src="img/wedding.jpg">
+        <img src="img/company-p.jpg">
       </div>
     </div>
   </div>
@@ -569,7 +565,7 @@
 -->
 </section>
 
-<section class="gravid-section">
+<section class="gravid-section" id="product">
   <div class="container">
     <div class="gravid-info">
       <div class="gravid-description padding-right animate-left">
@@ -585,7 +581,7 @@
         <a href="#" class="btn body-btn">Boka</a>
       </div>
       <div class="gravid-info-img animate-right">
-        <img src="img/wedding.jpg">
+        <img src="img/product_p.jpg">
       </div>
     </div>
   </div>
@@ -594,14 +590,14 @@
 <!-- Product ends -->
 <footer>
 	<div class="container">
-		<div class="back-to-top">
+		<div class="back-to-top" id="about">
 			<a href="#hero"><i class="fas fa-chevron-up"></i></a>
 		</div>
 		<div class="footer-content">
 			<div class="footer-content-about animate-top">
 				<h4>Om Mig</h4>
 				<div class="asterisk"><i class="fas fa-asterisk"></i></div>
-					<p>Pixelmagi startades i Alingsås 2016 av mig, Britt Marie Ström, som älskar att fotografera
+					<p>Pixelmagi startades i Alingsås 2016 av mig, Britt-Marie Ström, som älskar att fotografera
 					  människor i olika situationer. Människor är fascinerande och mångfacetterade. Det finns alltid
 					  något nytt att se och upptäcka hos personer vi träffar. Jag ser det som mitt jobb att locka fram
 					  den genuina personligheten i varje människa jag möter genom kameran. Till min hjälp har jag
@@ -613,23 +609,18 @@
 					<h4>Sociala Medier</h4>
 						<ul class="social-icons">
 						<li>
-							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#"><i class="fab fa-instagram"></i></a>
 						</li>
 						<li>
 							<a href="#"><i class="fab fa-facebook-square"></i></a>
 						</li>
 						<li>
-							<a href="#"><i class="fab fa-pinterest"></i></a>
-						</li>
-						<li>
 							<a href="#"><i class="fab fa-linkedin-in"></i></a>
-						</li>
-						<li>
-							<a href="#"><i class="fab fa-tripadvisor"></i></a>
 						</li>
 					</ul>
 				</div>
-				<div class="newsletter-container">
+<!--
+        <div class="newsletter-container">
 				<h4>Nyhetsbrev</h4>
 					<form class="newsletter-form">
 						<input type="text" class="newsletter-input" placeholder="Your Email Address....">
@@ -638,6 +629,7 @@
 						</get_in_touch>
 					</form>
 				</div>
+    -->    
 			</div>
 		</div>
 	</div>
