@@ -34,6 +34,7 @@ html{
 	font-size: 10px;
 	color: var(--body-font-color);
 	scroll-behavior: smooth;
+
 }
 body{
 	overflow-x: hidden;
@@ -71,7 +72,7 @@ header
 .nav{
 	height: 7.2rem;
   display: none;
-	/*display: block;*/
+	display: block;
   right: 0;
   top: 0;
   position: fixed;
@@ -87,7 +88,7 @@ body.open .nav{
 	transform: translateY(-50%);
 	right: 2.5rem;
 	cursor: pointer;
-	z-index: 9000;
+	z-index: 1000;
 }
 .fa-times{
 display: none;
@@ -108,7 +109,7 @@ display: none;
 	transform: translateX(-100%);
 	transition: transform .5s;
 }
-.nav::before{
+/* .nav::before{
 	content: '';
 	position: fixed;
 	top: 0;
@@ -121,6 +122,8 @@ display: none;
 	transform: scale(0);
 	transition: opacity .5s;
 }
+
+*/
 
 .open .nav-list{
 	transform: translateX(0);
@@ -303,8 +306,8 @@ display: none;
   cursor: pointer;
   z-index: 1250;
   transition: all .5s ease-in-out;
-  /* border: 3px solid #fff; */
 }
+
 .menu-btn__burger {
   width: 50px;
   height: 6px;
@@ -426,7 +429,7 @@ display: none;
 }
 
 .contact-form .input-text:focus + .label,
-.contact-form .input-text:valid + .label{
+.contact-form .input-text:not(:placeholder-shown) + .label{
   transform: translate(-17px, -30px);
   font-size: 20px;
   transition: .3s;
@@ -435,13 +438,18 @@ display: none;
 textarea {
   resize: none;
   overflow-y: auto;
+  height: 5rem;
+}
 
+textarea {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .contact-form .input-text:focus {
   outline: none;
 }
-.contact-form .label{
+.contact-form .label {
   position: absolute;
   left: 20px;
   bottom: 11px;
@@ -467,8 +475,6 @@ textarea {
   width: 200px;
   cursor: pointer;
 }
-
-/*Discover our menu*/
 
 
 .image-group{
@@ -581,10 +587,9 @@ footer{
 	margin-bottom: 5.4rem;
 	display: flex;
 	justify-content: center;
-
+  padding-left: 0;
 }
 .social-icons i{
-
 	font-size: 2rem;
 	color: #fff;
 	padding: .8rem 2rem;
@@ -676,7 +681,7 @@ footer{
 	}
 	.footer-content-divider{
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 	}
 	.social-media,newsletter-form{
 		width: 100%;

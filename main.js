@@ -1,6 +1,7 @@
 const menuBtn = document.querySelector('.menu-btn');
 const navMenu = document.querySelector('.nav');
 const body = document.body;
+const textarea = document.getElementById('message');
 
 // Toggle menu
 menuBtn.addEventListener('click', (e) => {
@@ -9,7 +10,9 @@ menuBtn.addEventListener('click', (e) => {
 });
 
 // Close menu on outside click
+
 document.addEventListener('click', (e) => {
+  console.log('Clicked:', e.target);
   if (
     !menuBtn.contains(e.target) &&
     !navMenu.contains(e.target) &&
@@ -18,6 +21,13 @@ document.addEventListener('click', (e) => {
     body.classList.remove('open');
   }
 });
+
+
+textarea.addEventListener('input', () => {
+  textarea.style.height = 'auto';
+  textarea.style.height = textarea.scrollHeight + 'px';
+});
+
 
 // scroll reveal
 window.sr=ScrollReveal();
