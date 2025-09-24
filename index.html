@@ -2,14 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Professional Photography Website">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pixelmagi</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <link defer href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" as="style" rel="stylesheet">
+    <link defer href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" as="style" rel="stylesheet">
+    <link defer href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" as="style" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Herr+Von+Muellerhoff&family=Source+Sans+Pro:wght@400;900" rel="stylesheet">
+
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 	<header>
@@ -18,7 +25,6 @@
           <div class="menu-btn__burger"></div>
 				</div>
 				<ul class="nav-list">
-          <li class="nav-item"></li>
             <a href="#" class="nav-link">Pixelmagi</a>
           <li class="nav-item"></li>
             <a href="#wedding" class="nav-link">Bröllop</a>
@@ -56,10 +62,10 @@
 	<!-- Header ends -->
 	<section class="hero" id="hero">
 		<div class="container">
-			<h2 class="sub-headline">
+			<h2 class="sub-headline" style="font-family: Herr Von Muellerhoff, cursive">
 				<span class="first-letter">V</span>älkommen
 			</h2>
-			<h1 class="headline">Pixelmagi</h1>
+			<h1 class="headline" style="font-family: Souce Sans Pro">Pixelmagi</h1>
 			<div class="headline-description">
 				<div class="seperator">
 					<div class="line line-left"></div>
@@ -68,7 +74,7 @@
 				</div>
 				<div class="single-animation">
 					<h5>Redo att fotografera</h5>
-					<a href="#" class="btn cta-btn">Upptäck</a>
+					<a href="#wedding" class="btn cta-btn">Upptäck</a>
 				</div>
 			</div>
 		</div>
@@ -113,7 +119,7 @@
 					<a href="#contact" class="btn body-btn">Boka</a>
 				</div>
 				<div class="gravid-info-img animate-right">
-					<img src="img/wedding.jpg">
+					<img src="img/wedding.webp" rel="preload" alt="wedding-image">
 				</div>
 			</div>
 		</div>
@@ -126,15 +132,15 @@
   <div class="container">
     <div class="contact-form row">
       <div class="form-field col-lg-6">
-        <input id="name" required class="input-text" type="text" name="" placeholder=" ">
+        <input id="name" required class="input-text" autocomplete="given-name" type="text" name="" placeholder=" ">
         <label for="name" class="label">namn</label>
       </div>
       <div class="form-field col-lg-6">
-        <input id="email" required class="input-text" type="email" name="" placeholder=" ">
+        <input id="email" required class="input-text" autocomplete="off" type="email" name="" placeholder=" ">
         <label for="email" class="label">email</label>
       </div>
       <div class="form-field col-lg-6">
-        <input id="phone" required class="input-text" type="tel" name="" placeholder=" ">
+        <input id="phone" required class="input-text" autocomplete="mobile" type="tel" name="" placeholder=" ">
         <label for="phone" class="label">telefon nummer</label>
       </div>
       <div class="form-field col-lg-12">
@@ -154,10 +160,10 @@
 		<div class="container">
 			<div class="gravid-info">
 				<div class="image-group padding-right animate-left">
-					<img src="img/preg1.jpg">
-					<img src="img/preg2.jpg">
-					<img src="img/preg3.jpg">
-					<img src="img/preg4.jpg">
+					<img src="img/preg1.webp" alt="pregnant-image1">
+					<img src="img/preg2.webp" alt="pregnant-image2">
+					<img src="img/preg3.webp" alt="pregnant-image3">
+					<img src="img/preg4.webp" alt="pregnant-image4">
 				</div>
 				<div class="gravid-description animate-right">
 					<div class="global-headline">
@@ -182,19 +188,7 @@
 	</section>
 <!-- discover our menu ends -->
 <section class="gravid_b between">
-  <!--
-	<div class="container">
-		<div class="global-headline">
-			<div class="animate-top">
-				<h2 class="sub-headline">
-					<span class="first-letter">T</span>he perfect</h2>
-			</div>
-				<div class="animate-bottom">
-					<h1 class="headline">Blend</h1>
-				</div>
-		</div>
-	</div>
--->
+
 </section>
 <!-- perfect blend ends -->
 <section class="culinary-delight" id="baby">
@@ -219,27 +213,15 @@
 					<a href="#contact" class="btn body-btn">Boka</a>
 				</div>
 				<div class="image-group">
-					<img class="animate-top" src="img/baby1.jpg">
-					<img class="animate-bottom" src="img/baby2.jpg">
+					<img class="animate-top" src="img/baby1.webp" alt="baby-image">
+					<img class="animate-bottom" src="img/baby2.webp" alt="baby-image2">
 				</div>
 			</div>
 		</div>
 </section>
 
 <section class="baby_b between">
-  <!--
-	<div class="container">
-		<div class="global-headline">
-			<div class="animate-top">
-				<h2 class="sub-headline">
-					<span class="first-letter">T</span>he perfect</h2>
-			</div>
-				<div class="animate-bottom">
-					<h1 class="headline">Blend</h1>
-				</div>
-		</div>
-	</div>
--->
+
 </section>
 
 <section class="barn-section" id="child">
@@ -262,26 +244,14 @@
         <a href="#contact" class="btn body-btn">Boka</a>
       </div>
       <div class="gravid-info-img animate-right">
-        <img src="img/barn1.jpg">
+        <img src="img/barn1.webp" alt="child-portrait">
       </div>
     </div>
   </div>
 </section>
 
 <section class="barn_b between">
-  <!--
-	<div class="container">
-		<div class="global-headline">
-			<div class="animate-top">
-				<h2 class="sub-headline">
-					<span class="first-letter">T</span>he perfect</h2>
-			</div>
-				<div class="animate-bottom">
-					<h1 class="headline">Blend</h1>
-				</div>
-		</div>
-	</div>
--->
+
 </section>
 
 <section class="gravid-section" id="family">
@@ -302,26 +272,14 @@
         <a href="#contact" class="btn body-btn">Boka</a>
       </div>
       <div class="gravid-info-img animate-right">
-        <img src="img/family-v.jpg">
+        <img src="img/family-v.webp" alt="family-image">
       </div>
     </div>
   </div>
 </section>
 
 <section class="familj_b between">
-  <!--
-	<div class="container">
-		<div class="global-headline">
-			<div class="animate-top">
-				<h2 class="sub-headline">
-					<span class="first-letter">T</span>he perfect</h2>
-			</div>
-				<div class="animate-bottom">
-					<h1 class="headline">Blend</h1>
-				</div>
-		</div>
-	</div>
--->
+
 </section>
 
 <section class="gravid-section" id="portrait">
@@ -345,26 +303,14 @@
         <a href="#contact" class="btn body-btn">Boka</a>
       </div>
       <div class="gravid-info-img animate-right">
-        <img src="img/portrait.jpg">
+        <img src="img/portrait.webp" alt="portrait-image">
       </div>
     </div>
   </div>
 </section>
 
 <section class="porträtt_b between">
-  <!--
-	<div class="container">
-		<div class="global-headline">
-			<div class="animate-top">
-				<h2 class="sub-headline">
-					<span class="first-letter">T</span>he perfect</h2>
-			</div>
-				<div class="animate-bottom">
-					<h1 class="headline">Blend</h1>
-				</div>
-		</div>
-	</div>
--->
+
 </section>
 
 <section class="gravid-section" id="student">
@@ -383,26 +329,14 @@
         <a href="#contact" class="btn body-btn">Boka</a>
       </div>
       <div class="gravid-info-img animate-right">
-        <img src="img/student-portrait.jpg">
+        <img src="img/student-portrait.webp" alt="graduation-portrait">
       </div>
     </div>
   </div>
 </section>
 
 <section class="student_b between">
-  <!--
-	<div class="container">
-		<div class="global-headline">
-			<div class="animate-top">
-				<h2 class="sub-headline">
-					<span class="first-letter">T</span>he perfect</h2>
-			</div>
-				<div class="animate-bottom">
-					<h1 class="headline">Blend</h1>
-				</div>
-		</div>
-	</div>
--->
+
 </section>
 
 <section class="gravid-section" id="licence">
@@ -421,26 +355,14 @@
         <a href="#contact" class="btn body-btn">Boka</a>
       </div>
       <div class="gravid-info-img animate-right">
-        <img src="img/drivers-licence.jpg">
+        <img src="img/drivers-licence.webp" alt="drivers-licence-image">
       </div>
     </div>
   </div>
 </section>
 
 <section class="körkort_b between">
-  <!--
-	<div class="container">
-		<div class="global-headline">
-			<div class="animate-top">
-				<h2 class="sub-headline">
-					<span class="first-letter">T</span>he perfect</h2>
-			</div>
-				<div class="animate-bottom">
-					<h1 class="headline">Blend</h1>
-				</div>
-		</div>
-	</div>
--->
+
 </section>
 
 <section class="gravid-section" id="funeral">
@@ -463,26 +385,14 @@
         <a href="#contact" class="btn body-btn">Boka</a>
       </div>
       <div class="gravid-info-img animate-right">
-        <img src="img/funeral.jpg">
+        <img src="img/funeral.webp" alt="funeral-image">
       </div>
     </div>
   </div>
 </section>
 
 <section class="begravning_b between">
-  <!--
-	<div class="container">
-		<div class="global-headline">
-			<div class="animate-top">
-				<h2 class="sub-headline">
-					<span class="first-letter">T</span>he perfect</h2>
-			</div>
-				<div class="animate-bottom">
-					<h1 class="headline">Blend</h1>
-				</div>
-		</div>
-	</div>
--->
+
 </section>
 
 <section class="gravid-section" id="org">
@@ -503,26 +413,14 @@
         <a href="#contact" class="btn body-btn">Boka</a>
       </div>
       <div class="gravid-info-img animate-right">
-        <img src="img/org_p.jpg">
+        <img src="img/org_p.webp" alt="organization-image">
       </div>
     </div>
   </div>
 </section>
 
 <section class="associations_b between">
-  <!--
-	<div class="container">
-		<div class="global-headline">
-			<div class="animate-top">
-				<h2 class="sub-headline">
-					<span class="first-letter">T</span>he perfect</h2>
-			</div>
-				<div class="animate-bottom">
-					<h1 class="headline">Blend</h1>
-				</div>
-		</div>
-	</div>
--->
+
 </section>
 
 <section class="gravid-section" id="company">
@@ -545,26 +443,14 @@
         <a href="#contact" class="btn body-btn">Boka</a>
       </div>
       <div class="gravid-info-img animate-right">
-        <img src="img/company-p.jpg">
+        <img src="img/company-p.webp" alt="company-image">
       </div>
     </div>
   </div>
 </section>
 
 <section class="company_b between">
-  <!--
-	<div class="container">
-		<div class="global-headline">
-			<div class="animate-top">
-				<h2 class="sub-headline">
-					<span class="first-letter">T</span>he perfect</h2>
-			</div>
-				<div class="animate-bottom">
-					<h1 class="headline">Blend</h1>
-				</div>
-		</div>
-	</div>
--->
+
 </section>
 
 <section class="gravid-section" id="product">
@@ -583,7 +469,7 @@
         <a href="#contact" class="btn body-btn">Boka</a>
       </div>
       <div class="gravid-info-img animate-right">
-        <img src="img/product_p.jpg">
+        <img src="img/product_p.webp" alt="product-image">
       </div>
     </div>
   </div>
@@ -611,31 +497,89 @@
 					<h4>Sociala Medier</h4>
 						<ul class="social-icons">
 						<li>
-							<a href="#"><i class="fab fa-instagram"></i></a>
+							<a href="#instagram"><i class="fab fa-instagram"></i></a>
 						</li>
 						<li>
-							<a href="#"><i class="fab fa-facebook-square"></i></a>
+							<a href="#facebook"><i class="fab fa-facebook-square"></i></a>
 						</li>
 						<li>
-							<a href="#"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#linkedin"><i class="fab fa-linkedin-in"></i></a>
 						</li>
 					</ul>
 				</div>
-<!--
-        <div class="newsletter-container">
-				<h4>Nyhetsbrev</h4>
-					<form class="newsletter-form">
-						<input type="text" class="newsletter-input" placeholder="Your Email Address....">
-						<get_in_touch class="newsletter-btn" type="submit">
-							<i class="fas fa-envelope"></i>
-						</get_in_touch>
-					</form>
-				</div>
-    -->
+
 			</div>
 		</div>
 	</div>
 </footer>
-<script src="main.js"></script>
+<script rel="preconnect" src="https://unpkg.com/scrollreveal"></script>
+<script type="text/javascript">
+
+const menuBtn = document.querySelector('.menu-btn');
+/* const navMenu = document.querySelector('.nav'); */
+const body = document.body;
+const textarea = document.getElementById('message');
+
+// Toggle menu
+menuBtn.addEventListener('click', (e) => {
+  e.stopPropagation(); // Prevent body click
+  body.classList.toggle('open');
+  menuBtn.classList.toggle('open');
+});
+
+// Close menu on outside click
+
+document.addEventListener('click', (e) => {
+  console.log('Clicked:', e.target);
+  if (
+    !menuBtn.contains(e.target) &&
+    body.classList.contains('open') &&
+    menuBtn.classList.contains('open')
+  ) {
+    body.classList.remove('open')
+    menuBtn.classList.remove('open');
+  }
+});
+
+// Expand textarea
+
+textarea.addEventListener('input', () => {
+  textarea.style.height = 'auto';
+  textarea.style.height = textarea.scrollHeight + 'px';
+});
+
+
+// scroll reveal
+window.sr=ScrollReveal();
+sr.reveal('.animate-left',{
+  origin:'left',
+  duration :1000,
+  distance:'25rem',
+  delay: 300
+});
+
+window.sr=ScrollReveal();
+sr.reveal('.animate-right',{
+  origin:'right',
+  duration :1000,
+  distance:'25rem',
+  delay: 300
+});
+window.sr=ScrollReveal();
+sr.reveal('.animate-top',{
+  origin:'top',
+  duration :1000,
+  distance:'25rem',
+  delay: 400
+});
+window.sr=ScrollReveal();
+sr.reveal('.animate-bottom',{
+  origin:'bottom',
+  duration :1000,
+  distance:'25rem',
+  delay: 400
+});
+
+</script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
+
 /*Global styles*/
 *,
 *::before,
@@ -28,7 +28,7 @@ select:-webkit-autofill:focus {
     --main-font-color-dark: #252525;
     --secondary-font-color: #c59d5f;
     --body-font-color: #515151;
-}
+    }
 html{
 	font-family: var(--body-font);
 	font-size: 10px;
@@ -71,8 +71,7 @@ header
 }
 .nav{
 	height: 7.2rem;
-  display: none;
-	display: block;
+  display: block;
   right: 0;
   top: 0;
   position: fixed;
@@ -99,17 +98,18 @@ display: none;
 	top: 0;
 	left: 0;
 	width: 80;
-	height: 100vh;
 	background-color: var(--main-font-color-dark);
 	padding: 4.4rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	z-index: 1250;
+  overflow-y: auto;
+  max-height: 100vh;
 	transform: translateX(-100%);
 	transition: transform .5s;
 }
-/* .nav::before{
+ .nav::before{
 	content: '';
 	position: fixed;
 	top: 0;
@@ -122,8 +122,6 @@ display: none;
 	transform: scale(0);
 	transition: opacity .5s;
 }
-
-*/
 
 .open .nav-list{
 	transform: translateX(0);
@@ -152,7 +150,7 @@ display: none;
 .hero{
 	width: 100%;
 	height: 100vh;
-	background: url("img/hero2.jpg") center no-repeat;
+	background: url("img/hero2.webp") center no-repeat;
 	background-size: cover;
 	display: flex;
 	align-items: center;
@@ -373,8 +371,9 @@ display: none;
 
 /*Get in Touch section*/
 .get_out_touch {
-	background: url("img/thirdFiller.jpg") center no-repeat;
+	background: url("img/thirdFiller.webp") center no-repeat;
 	background-size: cover;
+  background-attachment: fixed;
 }
 .between{
 	min-height: 65vh;
@@ -428,12 +427,14 @@ display: none;
   font-weight: 400;
 }
 
+
 .contact-form .input-text:focus + .label,
 .contact-form .input-text:not(:placeholder-shown) + .label{
   transform: translate(-17px, -30px);
   font-size: 20px;
   transition: .3s;
 }
+
 
 textarea {
   resize: none;
@@ -450,7 +451,6 @@ textarea {
   outline: none;
 }
 .contact-form .label {
-  position: absolute;
   left: 20px;
   bottom: 11px;
   font-size: 18px;
@@ -492,43 +492,43 @@ textarea {
 /*Between section*/
 
 .gravid_b {
-	background:url(img/preg_between.jpg) center no-repeat;
+	background:url(img/preg_between.webp) center no-repeat;
 	background-size: cover;
 }
 .baby_b {
-  background:url(img/baby_between.jpg) center no-repeat;
+  background:url(img/baby_between.webp) center no-repeat;
 	background-size: cover;
 }
 .barn_b {
-  background:url(img/barn_between.jpg) center no-repeat;
+  background:url(img/barn_between.webp) center no-repeat;
 	background-size: cover;
 }
 .familj_b {
-  background:url(img/family-padding.jpg) center no-repeat;
+  background:url(img/family-padding.webp) center no-repeat;
 	background-size: cover;
 }
 .porträtt_b {
-  background:url(img/portrait_between.jpg) center no-repeat;
+  background:url(img/portrait_between.webp) center no-repeat;
 	background-size: cover;
 }
 .student_b {
-  background:url(img/student_between.jpg) center no-repeat;
+  background:url(img/student_between.webp) center no-repeat;
 	background-size: cover;
 }
 .körkort_b {
-  background:url(img/car-filler.jpg) center no-repeat;
+  background:url(img/car-filler.webp) center no-repeat;
 	background-size: cover;
 }
 .begravning_b {
-  background:url(img/funeral-b.jpg) center no-repeat;
+  background:url(img/funeral-b.webp) center no-repeat;
 	background-size: cover;
 }
 .associations_b {
-  background:url(img/org_between.jpg) center no-repeat;
+  background:url(img/org_between.webp) center no-repeat;
 	background-size: cover;
 }
 .company_b {
-  background:url(img/company-b.jpg) center no-repeat;
+  background:url(img/company-b.webp) center no-repeat;
 	background-size: cover;
 }
 
