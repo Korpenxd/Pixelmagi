@@ -71,7 +71,7 @@ export default async function Home() {
         <section id="om-mig" className={styles.about}>
           <Image
             className={styles.aboutImage}
-            src="/demo/about-britt-marie.jpg"
+            src="/demo/about-me.webp"
             alt="Britt-Marie Ström med kamera"
             width={900}
             height={900}
