@@ -51,7 +51,7 @@ export default async function Home() {
       <Navbar />
 
       <main>
-        <Hero heroImageUrl={heroImageUrl} />
+        <Hero imageUrl={heroImageUrl} />
 
         <section className={styles.specialties} aria-label="Fotograferingstjänster">
           {specialties.map((specialty) => (
