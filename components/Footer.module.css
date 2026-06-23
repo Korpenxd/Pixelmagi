@@ -1,0 +1,246 @@
+.footer {
+  padding: 2.4rem clamp(1.5rem, 5vw, 4.5rem) 1rem;
+  background: var(--dark);
+  color: #eee;
+}
+
+.main {
+  width: min(100%, 1320px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns:
+    minmax(220px, 0.85fr)
+    minmax(440px, 1.65fr)
+    minmax(250px, 1fr);
+  align-items: center;
+  gap: clamp(1.5rem, 3vw, 3.5rem);
+}
+
+.brand {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-right: clamp(1.25rem, 2.5vw, 2.5rem);
+  border-right: 1px solid rgba(169, 138, 97, 0.5);
+}
+
+.brandLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  text-align: center;
+}
+
+.brandMain {
+  color: #f5f2ed;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.brandSub {
+  margin-top: 0.6rem;
+  color: var(--gold);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  white-space: nowrap;
+}
+
+.branch {
+  width: 145px;
+  margin-top: 0.55rem;
+}
+
+.contactGrid {
+  align-self: stretch;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  padding-right: clamp(1.25rem, 2.5vw, 2.5rem);
+  border-right: 1px solid rgba(169, 138, 97, 0.5);
+}
+
+.contactItem {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 0.25rem 0.9rem;
+  color: #ddd;
+  text-align: center;
+  font-size: 0.63rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.contactItem:not(:last-child) {
+  border-right: 1px solid rgba(169, 138, 97, 0.32);
+}
+
+.contactItem svg {
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contactItem span,
+.link {
+  position: relative;
+  padding-bottom: 0.3rem;
+}
+
+.contactItem span::after,
+.link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transform: translateX(-50%);
+  transition: width 0.22s ease;
+}
+
+.contactItem:hover,
+.contactItem:focus-visible {
+  color: #fff;
+}
+
+.contactItem:hover span::after,
+.contactItem:focus-visible span::after,
+.link:hover::after,
+.link:focus-visible::after {
+  width: 100%;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  align-items: center;
+  gap: 0.9rem 1.35rem;
+}
+
+.link {
+  justify-self: start;
+  color: #eee;
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.bottom {
+  width: min(100%, 1320px);
+  margin: 2rem auto 0;
+  padding-top: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid #444;
+  color: #8b8b8b;
+  font-size: 0.62rem;
+}
+
+.credit {
+  color: #aaa;
+  transition: color 0.2s ease;
+}
+
+.credit:hover,
+.credit:focus-visible {
+  color: var(--gold);
+}
+
+
+@media (max-width: 1120px) {
+  .main {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .brand {
+    justify-content: center;
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+    border-right: 0;
+    border-bottom: 1px solid rgba(169, 138, 97, 0.38);
+  }
+
+  .contactGrid {
+    width: min(100%, 760px);
+    justify-self: center;
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+    border-right: 0;
+    border-bottom: 1px solid rgba(169, 138, 97, 0.38);
+  }
+
+  .links {
+    justify-self: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .footer {
+    padding: 2rem 1.25rem 1rem;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .contactItem {
+    width: 100%;
+    padding: 0;
+  }
+
+  .contactItem:not(:last-child) {
+    padding-bottom: 1.2rem;
+    border-right: 0;
+    border-bottom: 1px solid rgba(169, 138, 97, 0.28);
+  }
+
+  .links {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media (max-width: 560px) {
+  .brandMain {
+    font-size: 1.65rem;
+  }
+
+  .brandSub {
+    font-size: 0.55rem;
+  }
+
+  .branch {
+    width: 132px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    text-align: center;
+  }
+}

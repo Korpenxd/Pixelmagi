@@ -1,0 +1,386 @@
+.section {
+  margin-bottom: 3rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  background: var(--admin-surface);
+  border: 1px solid var(--admin-line);
+  box-shadow: 0 18px 50px rgba(65, 52, 36, 0.06);
+}
+
+.headingRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--admin-gold-dark);
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.headingRow h2,
+.formHeading h3,
+.cardCopy h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+}
+
+.headingRow h2 {
+  margin: 0;
+  font-size: clamp(1.65rem, 3vw, 2.25rem);
+}
+
+.intro {
+  max-width: 650px;
+  margin: 0.55rem 0 0;
+  color: var(--admin-muted);
+  font-family: var(--serif);
+  line-height: 1.65;
+}
+
+.count {
+  flex-shrink: 0;
+  padding: 0.5rem 0.75rem;
+  color: var(--admin-gold-dark);
+  background: var(--admin-gold-soft);
+  border: 1px solid var(--admin-gold-line);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.message {
+  margin: 0 0 1.25rem;
+  padding: 0.8rem 1rem;
+  color: var(--admin-ink);
+  background: var(--admin-gold-soft);
+  border-left: 3px solid var(--admin-gold);
+  font-size: 0.9rem;
+}
+
+.createPanel {
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  background: var(--admin-bg);
+  border: 1px solid var(--admin-line);
+}
+
+.formHeading {
+  margin-bottom: 1.25rem;
+}
+
+.formHeading h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.formHeading p {
+  margin: 0.35rem 0 0;
+  color: var(--admin-muted);
+  font-size: 0.82rem;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.field > span,
+.imagePicker > span,
+.replaceImage > span {
+  color: var(--admin-muted);
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.field input,
+.field textarea,
+.imagePicker input,
+.replaceImage input {
+  width: 100%;
+  min-width: 0;
+  padding: 0.8rem 0.9rem;
+  color: var(--admin-ink);
+  background: var(--admin-surface);
+  border: 1px solid var(--admin-line-strong);
+  border-radius: 0;
+  font: inherit;
+}
+
+.field textarea {
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.field input:focus,
+.field textarea:focus,
+.imagePicker input:focus,
+.replaceImage input:focus {
+  outline: 2px solid color-mix(in srgb, var(--admin-gold) 35%, transparent);
+  outline-offset: 1px;
+  border-color: var(--admin-gold);
+}
+
+.imageField {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.imagePicker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--admin-surface);
+  border: 1px dashed var(--admin-gold-line);
+}
+
+.imagePicker small {
+  color: var(--admin-muted);
+  line-height: 1.5;
+}
+
+.smallPreview {
+  position: relative;
+
+  width: 100%;
+  min-height: 0;
+  aspect-ratio: 4 / 3;
+
+  overflow: hidden;
+  background: var(--admin-media);
+}
+
+.smallPreview img,
+.cardImage img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.primaryButton,
+.secondaryButton,
+.dangerButton {
+  min-height: 42px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.primaryButton {
+  color: var(--admin-on-gold);
+  background: var(--admin-gold);
+  border: 1px solid var(--admin-gold);
+}
+
+.primaryButton:hover:not(:disabled) {
+  background: var(--admin-gold-dark);
+  border-color: var(--admin-gold-dark);
+  transform: translateY(-1px);
+}
+
+.secondaryButton {
+  color: var(--admin-ink);
+  background: transparent;
+  border: 1px solid var(--admin-line-strong);
+}
+
+.secondaryButton:hover:not(:disabled) {
+  color: var(--admin-gold-dark);
+  border-color: var(--admin-gold);
+}
+
+.dangerButton {
+  color: var(--admin-danger);
+  background: transparent;
+  border: 1px solid var(--admin-danger-line);
+}
+
+.dangerButton:hover:not(:disabled) {
+  color: var(--admin-on-dark);
+  background: var(--admin-danger);
+  border-color: var(--admin-danger);
+}
+
+.primaryButton:disabled,
+.secondaryButton:disabled,
+.dangerButton:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--admin-bg);
+  border: 1px solid var(--admin-line);
+}
+
+.cardImage {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--admin-media);
+}
+
+.position {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  padding: 0.38rem 0.5rem;
+  color: var(--admin-on-dark);
+  background: rgba(41, 38, 34, 0.82);
+  font-size: 0.61rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cardCopy,
+.editForm {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.1rem;
+}
+
+.cardCopy h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.cardCopy p {
+  margin: 0.75rem 0 1rem;
+  color: var(--admin-muted);
+  font-family: var(--serif);
+  line-height: 1.55;
+}
+
+.cardCopy strong {
+  margin-top: auto;
+  color: var(--admin-gold-dark);
+  font-size: 0.72rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.buttonPreview {
+  margin-top: 0.6rem;
+  color: var(--admin-ink);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.editForm {
+  gap: 0.85rem;
+}
+
+.editColumns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 105px;
+  gap: 0.75rem;
+}
+
+.replaceImage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.cardActions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin-top: 1.1rem;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.5rem;
+  color: var(--admin-muted);
+  background: var(--admin-bg);
+  border: 1px dashed var(--admin-line-strong);
+  line-height: 1.5;
+}
+
+.empty code {
+  color: var(--admin-gold-dark);
+}
+
+@media (max-width: 720px) {
+  .headingRow {
+    flex-direction: column;
+  }
+
+  .formGrid,
+  .imageField {
+    grid-template-columns: 1fr;
+  }
+
+  .smallPreview {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 420px) {
+  .cardActions,
+  .editColumns {
+    grid-template-columns: 1fr;
+  }
+
+  .formActions .primaryButton {
+    width: 100%;
+  }
+}

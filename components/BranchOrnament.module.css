@@ -1,0 +1,24 @@
+.ornament {
+  display: block;
+  width: 165px;
+  height: auto;
+  margin-inline: auto;
+  color: var(--gold);
+  overflow: visible;
+}
+
+.ornament path {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.stem {
+  stroke-width: 1.45;
+}
+
+.leaf {
+  stroke-width: 1.25;
+}

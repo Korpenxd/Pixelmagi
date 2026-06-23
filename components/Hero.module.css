@@ -1,0 +1,318 @@
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+
+  overflow: hidden;
+  background: #0b0907;
+  color: #fff;
+}
+
+.image {
+  object-fit: cover;
+  object-position: 64% center;
+}
+
+/*
+ * The first gradient provides the large dark text area.
+ * The second improves Navbar and lower-screen contrast.
+ */
+.shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 5, 4, 0.94) 0%,
+      rgba(7, 5, 4, 0.84) 23%,
+      rgba(7, 5, 4, 0.58) 40%,
+      rgba(7, 5, 4, 0.2) 59%,
+      rgba(7, 5, 4, 0.03) 76%,
+      rgba(7, 5, 4, 0.08) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.26) 0%,
+      rgba(0, 0, 0, 0.02) 32%,
+      rgba(0, 0, 0, 0.12) 72%,
+      rgba(0, 0, 0, 0.34) 100%
+    );
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+
+  width: min(100% - 2rem, 650px);
+  margin-left: var(--site-gutter);
+  padding-top: var(--navbar-height);
+}
+
+.eyebrow {
+  margin: 0 0 1.6rem;
+
+  color: var(--gold);
+
+  font-family: var(--font-sans);
+  font-size: clamp(0.62rem, 0.8vw, 0.76rem);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+
+  color: #fff;
+
+  font-family: var(--font-display);
+  font-size: clamp(4.6rem, 7vw, 7.8rem);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.script {
+  margin: -0.15rem 0 0;
+
+  color: var(--gold);
+
+  font-family: var(--font-script);
+  font-size: clamp(4rem, 6.7vw, 7.2rem);
+  font-weight: 400;
+  line-height: 0.9;
+  white-space: nowrap;
+
+  transform: translateX(-0.08em);
+}
+
+.intro {
+  max-width: 470px;
+  margin: 2.15rem 0 0;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: min(100%, 255px);
+  margin-top: 2.25rem;
+  padding: 1.15rem 1.5rem;
+
+  border: 1px solid rgba(169, 138, 97, 0.9);
+  background: rgba(14, 10, 7, 0.18);
+  color: #fff;
+
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+
+  transition:
+    background-color 0.24s ease,
+    border-color 0.24s ease,
+    color 0.24s ease;
+}
+
+.buttonArrow {
+  color: var(--gold);
+  font-family: Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 0;
+
+  transition:
+    color 0.24s ease,
+    transform 0.24s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  border-color: var(--gold);
+  background: var(--gold);
+  color: #211a14;
+}
+
+.button:hover .buttonArrow,
+.button:focus-visible .buttonArrow {
+  color: #211a14;
+  transform: translateX(5px);
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 4px;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+  .image {
+    object-position: 68% center;
+  }
+
+  .content {
+    width: min(58vw, 570px);
+  }
+
+  .title {
+    font-size: clamp(4rem, 8vw, 6rem);
+  }
+
+  .script {
+    font-size: clamp(3.5rem, 7.5vw, 5.6rem);
+  }
+
+  .shade {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(7, 5, 4, 0.94) 0%,
+        rgba(7, 5, 4, 0.82) 31%,
+        rgba(7, 5, 4, 0.48) 52%,
+        rgba(7, 5, 4, 0.08) 78%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.26),
+        transparent 35%,
+        rgba(0, 0, 0, 0.3)
+      );
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+  .hero {
+    align-items: flex-end;
+  }
+
+  .image {
+    object-position: 69% center;
+  }
+
+  .shade {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(7, 5, 4, 0.2) 0%,
+        rgba(7, 5, 4, 0.18) 28%,
+        rgba(7, 5, 4, 0.55) 58%,
+        rgba(7, 5, 4, 0.96) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(7, 5, 4, 0.52) 0%,
+        rgba(7, 5, 4, 0.08) 75%
+      );
+  }
+
+  .content {
+    width: 100%;
+    margin-left: 0;
+
+    padding:
+      calc(var(--navbar-height) + 5rem)
+      var(--site-gutter)
+      clamp(2.5rem, 8vh, 4rem);
+  }
+
+  .eyebrow {
+    margin-bottom: 1rem;
+    font-size: 0.58rem;
+  }
+
+  .title {
+    max-width: 100%;
+
+    font-size: clamp(3.5rem, 16vw, 5.3rem);
+    line-height: 0.91;
+  }
+
+  .script {
+    margin-top: 0.1rem;
+
+    font-size: clamp(3.25rem, 15vw, 5rem);
+    white-space: normal;
+  }
+
+  .intro {
+    max-width: 390px;
+    margin-top: 1.4rem;
+
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .button {
+    width: min(100%, 230px);
+    margin-top: 1.6rem;
+    padding: 1rem 1.25rem;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 430px) {
+  .image {
+    object-position: 72% center;
+  }
+
+  .title {
+    font-size: clamp(3.1rem, 15vw, 4.2rem);
+  }
+
+  .script {
+    font-size: clamp(2.9rem, 14vw, 4rem);
+  }
+
+  .intro {
+    max-width: 330px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .buttonArrow {
+    transition: none;
+  }
+}
