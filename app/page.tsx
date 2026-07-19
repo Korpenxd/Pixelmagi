@@ -101,3 +101,4 @@ export default async function Home() {
     </>
   )
 }
+<script defer src="https://cloud.umami.is/script.js" data-website-id="adc00934-2b73-491e-8af8-694bb0c9c1cf"></script>
