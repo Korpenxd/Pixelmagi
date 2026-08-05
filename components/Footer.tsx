@@ -72,7 +72,16 @@ export default function Footer() {
       <div className={styles.bottom}>
         <span>© {new Date().getFullYear()} Pixelmagi – Britt-Marie Ström</span>
         <span>
-          Site by <span className={styles.credit}>Birdbrain IT</span>
+          Site by {" "}
+            <a
+            className={styles.credit}
+            href="https://www.birdbrain.it"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Birdbrain – webbyrå i Alingsås"
+            >
+            Birdbrain IT
+            </a>
         </span>
       </div>
     </footer>

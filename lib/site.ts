@@ -7,6 +7,6 @@ export const siteConfig = {
   phoneHref: '+46701234567',
   location: 'Alingsås, Sverige',
   mapsUrl: 'https://maps.google.com/?q=Alingsås,+Sverige',
-  instagramUrl: 'https://www.instagram.com/',
-  facebookUrl: 'https://www.facebook.com/',
+  instagramUrl: 'https://www.instagram.com/pixelmagi/',
+  facebookUrl: 'https://www.facebook.com/pixelmagi/',
 } as const
