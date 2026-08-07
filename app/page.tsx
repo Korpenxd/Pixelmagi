@@ -12,8 +12,6 @@ import WeddingRingsIcon from '@/components/WeddingRingsIcon'
 import { getHeroImageUrl } from '@/lib/supabase'
 import styles from './home.module.css'
 
-export const dynamic = 'force-dynamic'
-
 export const metadata: Metadata = {
   title: 'Fotograf i Alingsås',
   description:
