@@ -85,6 +85,10 @@ export default async function ServicesPage() {
                 width={700}
                 height={520}
                 sizes="(max-width: 560px) 100vw, (max-width: 820px) 50vw, 33vw"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
               />
               <div className={styles.copy}>
                 <h2>{service.title}</h2>
