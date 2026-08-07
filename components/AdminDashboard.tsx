@@ -329,11 +329,11 @@ export default function AdminDashboard() {
 
   async function saveHeroPhoto() {
     if (!heroFile) {
-      alert('Välj en hero-bild först.')
+      alert('Välj en landningsbild först.')
       return
     }
 
-    const confirmed = window.confirm('Vill du ersätta den nuvarande hero-bilden?')
+    const confirmed = window.confirm('Vill du ersätta den nuvarande landningsbilden?')
 
     if (!confirmed) return
 
@@ -400,11 +400,11 @@ export default function AdminDashboard() {
       await loadPhotos()
     } catch (error) {
       const message =
-        error instanceof Error ? error.message : 'Unknown hero replacement error'
+        error instanceof Error ? error.message : 'Unknown landningsbild replacement error'
 
-      console.error('Hero replacement failed:', message)
+      console.error('Landningsbild replacement failed:', message)
 
-      alert(`Kunde inte uppdatera hero-bilden: ${message}`)
+      alert(`Kunde inte uppdatera landningsbilden: ${message}`)
     } finally {
       setSavingHero(false)
     }
@@ -1270,7 +1270,7 @@ export default function AdminDashboard() {
                   margin: '0 0 1rem',
                 }}
               >
-                Hero-bild
+                Landningsbild
               </h2>
 
               <div
@@ -1290,7 +1290,7 @@ export default function AdminDashboard() {
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
                     src={heroPreviewUrl || currentHeroUrl || ''}
-                    alt="Förhandsvisning av hero-bild"
+                    alt="Förhandsvisning av landningsbild"
                     style={{
                       width: '100%',
                       height: '100%',
@@ -1311,7 +1311,7 @@ export default function AdminDashboard() {
                       padding: '1rem',
                     }}
                   >
-                    Ingen hero-bild vald
+                    Ingen landningsbild vald
                   </div>
                 )}
 
@@ -1384,7 +1384,7 @@ export default function AdminDashboard() {
                     opacity: savingHero ? 0.6 : 1,
                   }}
                 >
-                  {savingHero ? 'Laddar upp...' : 'Spara hero-bild'}
+                  {savingHero ? 'Laddar upp...' : 'Spara landningsbild'}
                 </button>
               )}
             </section>
